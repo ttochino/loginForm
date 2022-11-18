@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SignForm(props) {
   const [state, setState] = useState({
@@ -12,6 +13,12 @@ export default function SignForm(props) {
       ...prevState,
       [id]: value,
     }));
+  };
+
+  const navigate = useNavigate();
+
+  const navigateToLogin = () => {
+    navigate("/");
   };
 
   return (
@@ -56,7 +63,7 @@ export default function SignForm(props) {
         </tr>
       </table>
       <div>
-        <button type="submit">login</button>
+        <button onClick={navigateToLogin}>login</button>
         <button link="">sign up</button>
       </div>
     </div >

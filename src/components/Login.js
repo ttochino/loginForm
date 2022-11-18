@@ -17,7 +17,7 @@ export default function Login(props) {
 
   const navigate = useNavigate();
 
-  const navigateToPurchase = () => {
+  const navigateToSignup = () => {
     navigate("/sign-form");
   };
 
@@ -48,8 +48,8 @@ export default function Login(props) {
         </tr>
       </table>
       <div>
-        <button type="submit">login</button>
-        <button onClick={navigateToPurchase}>sign up</button>
+        <button>login</button>
+        <button onClick={navigateToSignup}>sign up</button>
       </div>
     </div >
   );
